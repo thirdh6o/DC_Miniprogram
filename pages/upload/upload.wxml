@@ -1,0 +1,9 @@
+<view class="container">
+  <button bindtap="chooseImage" class="upload-btn">选择或拍摄图片</button>
+  <view wx:if="{{imagePath}}" class="preview-container">
+    <image src="{{imagePath}}" mode="aspectFit" class="preview-image"></image>
+  </view>
+  <button bindtap="uploadImage" class="upload-btn" disabled="{{isUploading}}">
+    {{isUploading ? '上传中...' : '上传图片'}}
+  </button>
+</view>

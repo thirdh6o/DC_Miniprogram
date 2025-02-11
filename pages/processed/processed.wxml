@@ -1,0 +1,9 @@
+<view class="container">
+  <view wx:if="{{isProcessing}}" class="processing-text">等待处理...</view>
+  <view wx:else>
+    <view class="processed-image-container">
+      <image src="{{processedImagePath}}" mode="aspectFit" class="processed-image"></image>
+    </view>
+    <button bindtap="reuploadImage" class="reupload-btn">重新上传</button>
+  </view>
+</view>
